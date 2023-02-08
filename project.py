@@ -32,7 +32,3 @@ def second_rule(board):
             if boardy.count(str(k))>1:
                 return False
     return True
-
-if __name__ == "__main__":
-    import doctest
-    print(doctest.testmod(verbose=True))
