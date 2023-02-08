@@ -12,7 +12,7 @@ def first_rule(board:list)->bool:
     False
     """
     for i in board:
-        for k in range(9):
+        for k in range(1,10):
             if i.count(str(k))>1:
                 return False
     return True
