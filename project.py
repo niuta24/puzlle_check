@@ -1,4 +1,3 @@
-"""subtask 2"""
 def second_rule(board):
     """
     >>> second_rule(["*1**4***5", "**3***27*", "4***2**6*", \
