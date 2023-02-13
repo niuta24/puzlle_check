@@ -24,7 +24,6 @@ def third_rule(board:list) -> bool:
                 check_lst.append(int(board[row + 4][col + jnd + 1]))
         row += 1
         col -= 1
-        # print(check_lst)
         for elm in check_lst:
             if int(elm) > 9 or int(elm) < 1:
                 return False
