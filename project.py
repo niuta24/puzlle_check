@@ -82,10 +82,8 @@ def second_rule(board):
 def third_rule(board:list) -> bool:
     """
     Checking if there is no repeating of numbers in the colours of the field
-
     Args:
         board (list): field of the game
-
     Returns:
         bool: True if there is no repeating of numbers in the colours
     >>> third_rule(["**** ****", "***1 ****", "** 13****", "* 4  ****",\
@@ -107,10 +105,13 @@ def third_rule(board:list) -> bool:
                 check_lst.append(int(board[row + 4][col + jnd + 1]))
         row += 1
         col -= 1
-        # print(check_lst)
         for elm in check_lst:
             if int(elm) > 9 or int(elm) < 1:
                 return False
         if len(check_lst) != len(set(check_lst)):
             return False
     return True
+
+if __name__=="__main__":
+    validate_board(["**** ****", "***1 ****", "**  3****",\
+"* 4 1****", "     9 5 ", " 6  83  *", "3   1  **", "  8  2***", "  2  ****"])
