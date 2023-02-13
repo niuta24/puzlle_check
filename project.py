@@ -115,17 +115,3 @@ def third_rule(board:list) -> bool:
             return False
         check_lst = []
     return True
-
-# import doctest
-# print(doctest.testmod())
-
-print(third_rule(
-    ["**** ****",
-      "***1 ****",
-      "**  3****",
-      "* 4 1****",
-      "     9 5 ",
-      " 6  83  *",
-      "3   4  **",
-      "  8  2***",
-      "  2  ****"]))
