@@ -15,8 +15,8 @@ def third_rule(board):
     """
     row = 0
     col = 4
-    check_lst = []
     for ind in range(5):
+        check_lst = []
         for jnd in range(5):
             if board[row + jnd][col] != " " and board[row + jnd][col] != "*":
                 check_lst.append(int(board[row + jnd][col]))
@@ -30,5 +30,4 @@ def third_rule(board):
                 return False
         if len(check_lst) != len(set(check_lst)):
             return False
-        check_lst = []
     return True
