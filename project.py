@@ -73,11 +73,7 @@ def second_rule(board):
     for line in board:
         for num, element in enumerate(line):
             res[num].append(element)
-    for boardy in res:
-        for k in range(1,10):
-            if boardy.count(str(k))>1:
-                return False
-    return True
+    return first_rule(res)
 
 def third_rule(board:list) -> bool:
     """
@@ -95,7 +91,7 @@ def third_rule(board:list) -> bool:
     """
     row = 0
     col = 4
-    for ind in range(5):
+    for _ in range(5):
         check_lst = []
         for jnd in range(5):
             if board[row + jnd][col] != " " and board[row + jnd][col] != "*":
@@ -112,6 +108,13 @@ def third_rule(board:list) -> bool:
             return False
     return True
 
-if __name__=="__main__":
+def main():
     print(validate_board(["**** ****", "***1 ****", "**  3****",\
 "* 4 1****", "     9 5 ", " 6  83  *", "3   1  **", "  8  2***", "  2  ****"]))
+
+
+if __name__=="__main__":
+    main()
+    import doctest
+    print(doctest.testmod())
+    
